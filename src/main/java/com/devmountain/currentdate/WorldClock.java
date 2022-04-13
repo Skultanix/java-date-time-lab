@@ -5,43 +5,45 @@ import java.time.*;
 public class WorldClock {
 
     public LocalDate getNowForDate() {
-        return null;
+        return LocalDate.now();
     }
 
     public LocalDateTime getNowForDateAndTime() {
-        return null;
+        return LocalDateTime.now();
     }
 
     public DayOfWeek getDayOfWeekForNow() {
-        return null;
+        return LocalDateTime.now().getDayOfWeek();
     }
 
     public int getDayOfMonthForNow() {
-        return 0;
+        return LocalDateTime.now().getDayOfMonth();
     }
 
     public int getDayOfYearForNow() {
-        return 0;
+        return LocalDateTime.now().getDayOfYear();
     }
 
     public ZonedDateTime getNowDateTimeForNewYork() {
-        return null;
+        //Return Method ZoneDateTime for now
+        //invoke the method .withZoneSameInstant with argument of a specific ZoneId
+        return ZonedDateTime.now().withZoneSameInstant(ZoneId.of("America/New_York"));
     }
 
     public ZonedDateTime getNowDateTimeForLA() {
-        return null;
+        return ZonedDateTime.now().withZoneSameInstant(ZoneId.of("America/Los_Angeles"));
     }
 
     public ZonedDateTime getNowDateTimeForLondon() {
-        return null;
+        return ZonedDateTime.now().withZoneSameInstant(ZoneId.of("Europe/London"));
     }
 
     public ZonedDateTime getNowDateTimeForMoscow() {
-        return null;
+        return ZonedDateTime.now().withZoneSameInstant(ZoneId.of("Europe/Moscow"));
     }
 
     public ZonedDateTime getNowDateTimeForTokyo() {
-        return null;
+        return ZonedDateTime.now().withZoneSameInstant(ZoneId.of("Asia/Tokyo"));
     }
 
 
